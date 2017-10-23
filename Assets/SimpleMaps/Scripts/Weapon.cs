@@ -42,7 +42,9 @@ public class Weapon : MonoBehaviour {
             Cooked = false;
             if (ChamberStatus.Loaded.Equals(currentSlot)) {
                 FireBullet();
-                OnBulletFired?.Invoke();
+                if (OnBulletFired != null) {
+                    OnBulletFired();
+                }
                 currentSlot = ChamberStatus.EmptyShell;
             }
             NextSlot();
@@ -57,8 +59,15 @@ public class Weapon : MonoBehaviour {
         Vector3 point;
         if (Physics.Raycast(ray, out hit, range, hitMask.value)) {
             point = hit.point;
+
             if (hit.rigidbody != null) {
-                hit.rigidbody.AddForceAtPosition(ray.direction * hitForce, hit.point);
+                if (hit.rigidbody.GetComponent<RagdollManager>() != null) {
+                    hit.rigidbody.GetComponent<RagdollManager>().ReceiveHit(hit.point, ray.direction * hitForce);
+                } else if (hit.rigidbody.GetComponent<HatController>() != null) {
+                    hit.rigidbody.GetComponent<HatController>().Hit(hit.point, ray.direction * hitForce);
+                    } else {
+                    hit.rigidbody.AddForceAtPosition(ray.direction * hitForce, hit.point);
+                }
             }
         } else {
             point = ray.GetPoint(range);
@@ -80,14 +89,18 @@ public class Weapon : MonoBehaviour {
             for (int i = 0; i < slots.Length; i++) {
                 int checkPosition = (drumPosition + i) % slots.Length;
                 if (!ChamberStatus.Loaded.Equals(slots[checkPosition])) {
-                    OnInsertOne?.Invoke();
+                    if (OnInsertOne != null) {
+                        OnInsertOne();
+                    }
                     slots[checkPosition] = ChamberStatus.Loaded;
                     break;
                 }
             }
         } else if (Opened && ChamberStatus.None.Equals(currentSlot)) {
             currentSlot = ChamberStatus.Loaded;
-            OnInsertOne?.Invoke();
+            if (OnInsertOne != null) {
+                OnInsertOne();
+            }
             NextSlot();
         }
     }

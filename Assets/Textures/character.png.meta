@@ -1,15 +1,18 @@
 fileFormatVersion: 2
 guid: 78a1a1c9f4dc41744aaa9da73b85998c
-timeCreated: 1508710697
+timeCreated: 1508788137
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: character_body
-    21300002: character_arm
+    21300002: character_single
     21300004: character_head
-    21300006: character_leg
+    21300006: character_foot_flat
     21300008: character_hat
     21300010: character_head_full
+    21300012: character_foot_side
+    21300014: character_foot_front
+    21300016: character_hand
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -150,26 +153,26 @@ TextureImporter:
       name: character_body
       rect:
         serializedVersion: 2
-        x: 7
-        y: 122
-        width: 91
-        height: 123
+        x: 0
+        y: 386
+        width: 94
+        height: 126
       alignment: 9
       pivot: {x: 0.444344, y: 0.5002679}
-      border: {x: 5, y: 4, z: 15, w: 8}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: character_arm
+      name: character_single
       rect:
         serializedVersion: 2
-        x: 133
-        y: 135
-        width: 31
-        height: 95
+        x: 104
+        y: 432
+        width: 36
+        height: 70
       alignment: 9
-      pivot: {x: 0.29760298, y: 0.92572117}
+      pivot: {x: 0.48245895, y: 0.8384277}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -178,27 +181,27 @@ TextureImporter:
       name: character_head
       rect:
         serializedVersion: 2
-        x: 214
-        y: 122
-        width: 95
-        height: 100
+        x: 220
+        y: 408
+        width: 84
+        height: 69
       alignment: 9
-      pivot: {x: 0.5070595, y: 0.33725494}
-      border: {x: 15, y: 27, z: 14, w: 16}
+      pivot: {x: 0.5126067, y: 0.15605097}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: character_leg
+      name: character_foot_flat
       rect:
         serializedVersion: 2
-        x: 26
-        y: 0
+        x: 32
+        y: 187
         width: 51
         height: 91
       alignment: 9
-      pivot: {x: 0.19261843, y: 0.87517554}
-      border: {x: 8, y: 13, z: 3, w: 9}
+      pivot: {x: 0.49031013, y: 0.7475933}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -206,13 +209,13 @@ TextureImporter:
       name: character_hat
       rect:
         serializedVersion: 2
-        x: 99
-        y: 41
-        width: 114
-        height: 52
+        x: 95
+        y: 307
+        width: 119
+        height: 55
       alignment: 9
       pivot: {x: 0.49568242, y: 0.24053654}
-      border: {x: 4, y: 8, z: 5, w: 5}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -220,13 +223,55 @@ TextureImporter:
       name: character_head_full
       rect:
         serializedVersion: 2
-        x: 215
-        y: 15
-        width: 114
+        x: 214
+        y: 281
+        width: 118
         height: 90
       alignment: 9
       pivot: {x: 0.4739222, y: 0.11655773}
-      border: {x: 3, y: 7, z: 2, w: 8}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_foot_side
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 189
+        width: 30
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_foot_front
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 159
+        width: 53
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_hand
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 390
+        width: 52
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0

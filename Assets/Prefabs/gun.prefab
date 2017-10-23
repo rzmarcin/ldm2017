@@ -263,7 +263,7 @@ MonoBehaviour:
   hitMask:
     serializedVersion: 2
     m_Bits: 257
-  hitForce: 50
+  hitForce: 1000
   range: 1000
   shotLine: {fileID: 120788977635497288}
   lineTime: 0.1
